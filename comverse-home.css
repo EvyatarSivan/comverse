@@ -1,0 +1,44 @@
+body {
+    margin-top: 0px !important;
+}
+main section div, header, footer {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+header {
+    background-color: aqua;
+    position: relative;
+}
+header img[alt="Comverse Logo"] {
+    display:inline-block;
+}
+header ul {
+    display:inline-block;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+header ul li {
+    font-size: 0.8rem;
+    display:inline-block;
+}
+header ul li:before {
+    content: " | ";
+}
+header ul li:first-child:before {
+    content: none;
+}
+#search {
+    display:inline-block;
+    float: right;
+    position: absolute;
+    bottom: 1rem;
+}
+#FreeYour {
+    background-image: url("img/slide-bg-complexity.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:contain;
+
+}
+
