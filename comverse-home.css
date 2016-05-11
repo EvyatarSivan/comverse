@@ -1,44 +1,291 @@
-body {
-    margin-top: 0px !important;
+html, body {
+    /*max-width so that block width gets smaller relative to window*/
+    max-width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    margin: 0px !important;
+    font-family: sans-serif;
 }
-main section div, header, footer {
+
+.center, header div, footer {
     margin: auto;
-    width: 60%;
+    width: 50%;
     padding: 10px;
 }
+
+/*header*/
 header {
-    background-color: aqua;
+    background-color: white;
     position: relative;
+    box-shadow: 0px 5px 5px #888888;
 }
+
 header img[alt="Comverse Logo"] {
-    display:inline-block;
+    display: inline-block;
 }
+
 header ul {
-    display:inline-block;
+    display: inline-block;
     padding-left: 0px;
     padding-right: 5px;
+
 }
+
 header ul li {
     font-size: 0.8rem;
-    display:inline-block;
+    display: inline-block;
+    color: #888888;
 }
+
+header ul li a {
+    color: #888888;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: gray;
+    text-shadow: 1px 1px 1px lightgray;
+}
+
 header ul li:before {
     content: " | ";
 }
+
 header ul li:first-child:before {
     content: none;
 }
+
 #search {
-    display:inline-block;
+    display: inline-block;
+    float: right;
+    color: #888888;
+}
+
+#search span {
+    font-size: 0.8rem;
+}
+
+#topSearch {
     float: right;
     position: absolute;
-    bottom: 1rem;
+    top: 1px;
 }
+
+#bottomSearch {
+    display: inline-block;
+    /*don't know how to make it relative'*/
+    width: 150px;
+    float: right;
+    border: 1px solid #d0d0d0;
+    padding: 3px 5px;
+    background-color: #fcfcfc;
+    border-radius: 2em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 0.5em;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+}
+
+#searchInput {
+    border: 0;
+}
+
+form button {
+    border: 0;
+    background: none;
+    color: #888888;
+}
+
+form button:hover {
+    background: gainsboro;
+}
+
+#topSearch select {
+    border: 0px;
+    outline: 0px;
+    color: #888888;
+}
+
+/*end header*/
+/*start section1*/
 #FreeYour {
     background-image: url("img/slide-bg-complexity.jpg");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    background-size:contain;
+    background-size: cover;
+}
+
+#FreeYour h1 {
+    color: white;
+    font-weight: normal;
+}
+
+#FreeYour p {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.blueBgWhiteTxtBtn {
+    display: block;
+    text-align: left;
+    padding: 0.4rem;
+    padding-right: 4px;
+    font-size: 0.8rem;
+    margin: 8px 4px;
+    margin-bottom: 20px;
+    border: 0;
+    color: white;
+    box-shadow: 1px 1px 2px #5C91BE;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    background: linear-gradient(to left top, rgba(17, 136, 196, 0.8), rgba(49, 150, 202, 0.8));
+    text-decoration: none;
+}
+
+.blueBgWhiteTxtBtn:hover {
+    background: linear-gradient(to left top, rgba(17, 136, 196, 1), rgba(49, 150, 202, 1));
+}
+
+.blueBgWhiteTxtBtn img {
+    position: relative;
+    margin-left: 2.1rem;
+    float: right;
+}
+
+.section1Boxes {
+    position: relative;
+    display: inline-table;
+    width: 10rem;
+    height: 6rem;
+    text-align: left;
+    padding: 0.6rem;
+    padding-right: 25px;
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+    border: 0;
+    background-color: hsla(330, 97%, 63%, 0.8);
+    box-shadow: 1px 1px 2px gray;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    bottom: 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.section1Boxes label {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0.6rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.section1Boxes label img {
+    max-width: 18px;
+    height: auto;
+}
+
+#box2 {
+    background-color: hsla(97, 53%, 56%, 0.8);
+}
+
+#box3 {
+    background-color: hsla(30, 79%, 55%, 0.8);
+}
+
+#box1:hover {
+    background-color: hsla(330, 97%, 63%, 1);
+}
+
+#box2:hover {
+    background-color: hsla(97, 53%, 56%, 1);
+}
+
+#box3:hover {
+    background-color: hsla(30, 79%, 55%, 1);
+}
+
+/*end section1*/
+/*start section2*/
+#whatWeDo {
+    text-align: center;
+    align-content: center;
+    background: radial-gradient(circle, #47c3f0, #329CCE);
+    color: white;
+}
+#whatWeDo h1 {
+    font-weight: normal;
+}
+
+.whatwedoimg {
+    display: inline-table;
+    max-width: 6rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+/*need to make the p hover affect on img too*/
+#transformIcons img:hover {
+    content: url("img/solution_icon_biz-transform_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+#personalIcon img:hover {
+    content: url("img/solution_icon_personal_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+#smartIcon img:hover {
+    content: url("img/solution_icon_smart-money_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+#optimizeIcon img:hover {
+    content: url("img/solution_icon_optimize-efficnt_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+#ditiIcon img:hover {
+    content: url("img/solution_icon_diti-cx_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+#bizIcon img:hover {
+    content: url("img/solution_icon_biz-analitics_hover.png");
+    display: inline-table;
+    max-width: 6.7rem;
+    height: auto;
+    font-size: 0.8rem;
+}
+
+.whatwedoimg img {
+    max-width: 6.7rem;
+    height: auto;
 
 }
+
+#whatWeDo button {
+    display: inline-block;
+}
+
+
 

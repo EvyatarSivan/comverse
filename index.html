@@ -7,28 +7,37 @@
 </head>
 <body>
     <header>
-        <img src="img/comverse-logo.png" alt="Comverse Logo">
-        <ul>
-            <li>YOUR NEEDS</li>
-            <li>OUR PORTFOLIO</li>
-            <li>NEWS & MEDIA</li>
-            <li>ABOUT COMVERSE</li>
-        </ul>
-        <section id="search">
-            <select name="Language">
-                <option value="EN">EN</option>
-                <option value="HE">HE</option>
-                <option value="SP">SP</option>
-            </select>
-            <span>Customer Login</span>
-            <br>
-            <input type="text" id="searchInput">
-            <img src="img/searchBtn.png" alt="searchBtn">
-        </section>
+        <div class="center">
+            <img src="img/comverse-logo.png" alt="Comverse Logo">
+            <ul>
+                <li><a href="#">YOUR NEEDS</a></li>
+                <li><a href="#">OUR PORTFOLIO</a></li>
+                <li><a href="#">NEWS & MEDIA</a></li>
+                <li><a href="#">ABOUT COMVERSE</a></li>
+            </ul>
+            <section id="search">
+                <div id="topSearch">
+
+                    <select name="Language">
+                        <option value="EN">EN</option>
+                        <option value="HE">HE</option>
+                        <option value="SP">SP</option>
+                    </select>
+                    <span>Customer Login</span>
+                </div>
+                <br>
+                <div id="bottomSearch">
+                    <form>
+                        <input size="12" placeholder="Search..." type="text" id="searchInput">
+                        <button type="submit"> <span> | </span><img src="img/searchBtn.png" alt="searchBtn"></button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </header>
     <main>
         <section id="FreeYour">
-            <div id="FreeYourContent">
+            <div class="center">
 
 
                 <h1>
@@ -37,67 +46,73 @@
                 <p>
                     Comverse Policy Studio <br><b>1st</b> Ever Marketign-Oriented Policy Tool
                 </p>
-                <button>
+                <button class="blueBgWhiteTxtBtn">
                     LEARN MORE
                     <img src="img/btnArrow.png" alt="arrowBtn">
                 </button>
                 <!--4 dots which I don't know what for-->
-                <section class="section1 boxes">
+                <section class="section1Boxes" id="box1">
                     Comverse Is Value-Added Service Global Market Leader. <br>
                     <label>
                         <img src="img/link-icon-image.png" alt="box1Attachment">
                         Read More
                     </label>
                 </section>
-                <section class="section1 boxes">
+                <section class="section1Boxes" id="box2">
                     Managed Services World Congress September 18-19 Berlin, Germany <br>
                     <label>
-                        <!--<img src="img/link-icon-image.png" alt="box1Attachment"> missing Icon-->
+                        <img src="img/link-icon-image.png" alt="box1Attachment">
                         Read More
                     </label>
                 </section>
-                <section class="section1 boxes">
+                <section class="section1Boxes" id="box3">
                     Comverse: Enabling a world of Connected Possibilities <br>
                     <label>
-                        <!--<img src="img/link-icon-image.png" alt="box1Attachment"> missing Icon-->
-                        Read More
+                        <img src="img/link-icon-image.png" alt="box1Attachment">
+                        <b>Watch Now</b>
                     </label>
                 </section>
             </div>
         </section>
-        <section>
+        <section id="whatWeDo">
+            <div class="center">
+
             <h1>WHAT CAN WE DO FOR YOU?</h1>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="bizIcon">
                 <img src="img/solution_icon_biz-analitics.png" alt="solutionSmartMoney">
                 <p>Data monetization</p>
             </div>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="ditiIcon">
                 <img src="img/solution_icon_diti-cx.png" alt="solutionSmartMoney">
                 <p>Machine to machine<br>(M2M)</p>
             </div>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="smartIcon">
                 <img src="img/solution_icon_smart-money.png" alt="solutionSmartMoney">
                 <p>Over-the-top<br>(OTT)</p>
             </div>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="optimizeIcon">
                 <img src="img/solution_icon_optimize-efficnt.png" alt="solutionSmartMoney">
                 <p>Cloud computing</p>
             </div>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="personalIcon">
                 <img src="img/solution_icon_personal.png" alt="solutionSmartMoney">
                 <p>Managed services</p>
             </div>
-            <div class="whatwedoimg">
+            <div class="whatwedoimg" id="transformIcons">
                 <img src="img/solution_icon_biz-transform.png" alt="solutionSmartMoney">
                 <p>Social Media</p>
             </div>
-            <button class="blueBtnPlay">
+                <br>
+            <button class="blueBgWhiteTxtBtn">
                 See all of our solutions
                 <img src="img/btnArrow.png" alt="arrowBtn">
             </button>
 
+            </div>
         </section>
         <section>
+            <div class="center">
+
             <h1>WHAT'S HAPPENING AT COMVERSE?</h1>
             <div class="happeningDiv">
                 <h2>NEWS</h2>
@@ -155,8 +170,11 @@
                     </span>
                 </div>
             </div>
+            </div>
         </section>
         <section>
+            <div class="center">
+
             <h2>Success Stories</h2>
             <div class="largeSuccessbox">
                 <img src="img/CB-JP-face.png" alt="CB-JP-face">
@@ -219,6 +237,7 @@
                 All 79 Success Stories
                 <img src="img/btnArrow.png" alt="arrowBtn">
             </button>
+            </div>
         </section>
         <!--some arrow-->
 
