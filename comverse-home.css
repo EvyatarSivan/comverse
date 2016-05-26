@@ -6,23 +6,29 @@ html, body {
     padding: 0px;
     overflow-x: hidden;
     margin: 0px !important;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.center, header div, footer {
+.center, header div, footer div {
     margin: auto;
-    width: 50%;
+    margin-bottom: 0;
+    width: 60%;
     padding: 10px;
 }
 
 /*header*/
 header {
+    z-index: 10;
     background-color: white;
     position: relative;
     box-shadow: 0px 5px 5px #888888;
 }
 
 header img[alt="Comverse Logo"] {
+    width: 8rem;
+    height: auto;
+    margin-right: 5px;
     display: inline-block;
 }
 
@@ -30,54 +36,110 @@ header ul {
     display: inline-block;
     padding-left: 0px;
     padding-right: 5px;
-
+    margin-bottom: 0;
 }
 
 header ul li {
     font-size: 0.8rem;
-    display: inline-block;
+    list-style: none;
+    float: left;
     color: #888888;
 }
 
-header ul li a {
+.dropdownBtn {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #d0d0d0;
     color: #888888;
     text-decoration: none;
 }
 
-header ul li a:hover {
+.navMenu:hover .dropdownBtn {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 17px;
+    border: 1px solid #d0d0d0;
+    border-bottom: 0px;
+    background-color: white;
+    box-shadow: px;
     color: gray;
     text-shadow: 1px 1px 1px lightgray;
 }
 
-header ul li:before {
-    content: " | ";
+header ul li:last-child label {
+    border-right: 0;
 }
 
-header ul li:first-child:before {
-    content: none;
+header ul li:first-child label:hover {
+    border-left: 1px solid #d0d0d0;
 }
 
-#search {
-    display: inline-block;
+header ul li:hover .nav-bg {
+    display: block;
+}
+
+header ul ul li {
+    float: none;
+    display: block;
+}
+
+.nav-bg {
+    position: absolute;
+    padding: 25px;
+    top: 69px;
+    right: 40%;
+    left: 18%;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #d0d0d0;
+    display: none;
+}
+.nav-bg li a {
+    text-decoration: none;
+    color: gray ;
+    font-size: 0.9rem;
+}
+.nav-bg li a:hover {
+    color: #5C91BE;
+}
+.nav-bg img {
+    padding-left: 40px;
+    border-left: 1px solid #d0d0d0;
     float: right;
+}
+
+header ul li:last-child label {
+    border-right: 3px solid #ffffff;
+}
+
+/*drop down*/
+#search {
+    float: right;
+    display: inline-block;
     color: #888888;
+    font-size: 0.8rem;
+    width: 150px;
 }
 
 #search span {
-    font-size: 0.8rem;
 }
 
 #topSearch {
-    float: right;
-    position: absolute;
-    top: 1px;
+    width: 155px;
+    font-size: 10pt;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#topSearch span {
+    width: 0.8rem;
 }
 
 #bottomSearch {
     display: inline-block;
     /*don't know how to make it relative'*/
-    width: 150px;
-    float: right;
+    width: 130px;
     border: 1px solid #d0d0d0;
     padding: 3px 5px;
     background-color: #fcfcfc;
@@ -87,16 +149,18 @@ header ul li:first-child:before {
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 0.5em;
     display: inline-block;
-    position: absolute;
     bottom: 20px;
 }
 
 #searchInput {
     border: 0;
+    background-color: hsla(0,0%,0%,0);
 }
 
 form button {
+    float: right;
     border: 0;
+    border-left: 1px solid #d0d0d0;
     background: none;
     color: #888888;
 }
@@ -113,22 +177,63 @@ form button:hover {
 
 /*end header*/
 /*start section1*/
-#FreeYour {
-    background-image: url("img/slide-bg-complexity.jpg");
+main {
+    position: relative;
+}
+.section1 {
+}
+#slide1 {
+    height: 400px;
+    background-image: url("img/slide/custom-experience.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    overflow: auto;
+}
+.section1 ul {
+    margin: 0;
+    padding: 0;
 }
 
-#FreeYour h1 {
+#slide1 h1 {
     color: white;
     font-weight: normal;
 }
 
-#FreeYour p {
+#slide1 p {
     color: white;
     font-size: 0.8rem;
+}
+
+.section1AbsoluteElementsDiv {
+    position: absolute;
+    width: 100%;
+    top: 190px;
+}
+
+.radioButtons ul {
+    padding-left: 0;
+}
+.radioButtons li {
+    display: inline-block;
+}
+.radioButtons li a{
+    display: inline-block;
+    background-color: #d0d0d0;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.radioButtons li a:focus {
+    background-color: #5C91BE;
+}
+[value="radio2"]:focus {
+    background-color: aqua !important;
+}
+[value="radio2"]:focus #slide1 {
+    background-position: -1700px 0px !important;
 }
 
 .blueBgWhiteTxtBtn {
@@ -163,13 +268,13 @@ form button:hover {
 .section1Boxes {
     position: relative;
     display: inline-table;
-    width: 10rem;
-    height: 6rem;
+    width: 13rem;
+    height: 8rem;
     text-align: left;
     padding: 0.6rem;
     padding-right: 25px;
     margin-right: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     border: 0;
     background-color: hsla(330, 97%, 63%, 0.8);
     box-shadow: 1px 1px 2px gray;
@@ -178,7 +283,6 @@ form button:hover {
     border-bottom-right-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
     bottom: 0;
-    font-size: 0.9rem;
     color: white;
 }
 
@@ -220,7 +324,10 @@ form button:hover {
 #whatWeDo {
     text-align: center;
     align-content: center;
+    background-image: url("img/solutions-bg.png");
+    background-repeat: repeat;
     background: radial-gradient(circle, #47c3f0, #329CCE);
+
     color: white;
 }
 
@@ -229,59 +336,67 @@ form button:hover {
 }
 
 .whatwedoimg {
+    width: 110px;
+    background-repeat: no-repeat;
+    background-position: top;
     display: inline-table;
-    max-width: 6rem;
     height: auto;
     font-size: 0.8rem;
+    margin-left: -5px;
+}
+
+.whatwedoimg p {
+    padding-top: 60px;
 }
 
 /*need to make the p hover affect on img too*/
-#transformIcons img:hover {
-    content: url("img/solution_icon_biz-transform_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#transformIcons {
+    background-image: url("img/solution_icon_biz-transform.png");
 }
 
-#personalIcon img:hover {
-    content: url("img/solution_icon_personal_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#transformIcons:hover {
+    background-image: url("img/solution_icon_biz-transform_hover.png");
 }
 
-#smartIcon img:hover {
-    content: url("img/solution_icon_smart-money_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#personalIcon:hover {
+    background-image: url("img/solution_icon_personal_hover.png");
 }
 
-#optimizeIcon img:hover {
-    content: url("img/solution_icon_optimize-efficnt_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#personalIcon {
+    background-image: url("img/solution_icon_personal.png");
 }
 
-#ditiIcon img:hover {
-    content: url("img/solution_icon_diti-cx_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#smartIcon:hover {
+    background-image: url("img/solution_icon_smart-money_hover.png");
 }
 
-#bizIcon img:hover {
-    content: url("img/solution_icon_biz-analitics_hover.png");
-    display: inline-table;
-    max-width: 6.7rem;
-    height: auto;
-    font-size: 0.8rem;
+#smartIcon {
+    background-image: url("img/solution_icon_smart-money.png");
+}
+
+#optimizeIcon:hover {
+    background-image: url("img/solution_icon_optimize-efficnt_hover.png");
+}
+
+#optimizeIcon {
+    background-image: url("img/solution_icon_optimize-efficnt.png");
+}
+
+#ditiIcon {
+    background-image: url("img/solution_icon_diti-cx.png");
+}
+
+#ditiIcon:hover {
+    background-image: url("img/solution_icon_diti-cx_hover.png");
+}
+
+#bizIcon {
+    background-image: url("img/solution_icon_biz-analitics.png");
+
+}
+
+#bizIcon:hover {
+    background-image: url("img/solution_icon_biz-analitics_hover.png");
 }
 
 .whatwedoimg img {
@@ -359,14 +474,17 @@ h1 {
     font-size: 0.5rem;
 }
 
-.happeningDiv span {
+.happeningDiv a {
+    color: #f5f5f0;
+    text-decoration: none;
     margin: 0.4rem;
     display: block;
     font-size: 0.8rem;
 }
 
-.happeningDiv span img {
-    max-width: 0.8rem;
+.happeningDiv a:hover {
+    box-shadow: #f5f5f0;
+    color: black;
 }
 
 /*another h2 above 3rd box*/
@@ -380,28 +498,38 @@ h1 {
 #succesStoriesSec {
     display: block;
     text-align: center;
+    align-content: center;
     background-color: #f5f5f0;
 }
 
 #successCenter {
-    -webkit-column-count: 3;
-     -webkit-column-gap: 10px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 10px; /* Firefox */
-    column-gap: 10px;
-    column-count: 3;
-    display: inline-table;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
     width: 70%;
     margin: 0rem;
-    column-width: auto;
-    column-gap: 10px;
 }
 
+#successCenter h4 {
+    font-size: 0.9rem;
+}
+
+.columns {
+    float: left;
+}
+
+.columns::after {
+    content: '';
+    display: inline-block;
+    clear: both;
+}
 
 /*left column*/
 
 .leftColumn {
-    display: inline-table;
+    display: inline-block;
     width: 300px;
+    margin-right: 0px;
 }
 
 .smallSuccessbox1 {
@@ -410,7 +538,7 @@ h1 {
 }
 
 [alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"] {
-    max-width: 5.9rem;
+    max-width: 6rem;
 }
 
 [alt="greyQuote"] {
@@ -453,15 +581,19 @@ h1 {
 /*end left column*/
 /*start middle column*/
 .middleColumn {
-    position: relative;
     bottom: 1rem;
-    display: inline-table;
+    vertical-align: top;
+    display: inline-block;
     width: 300px;
+}
+
+[alt="Jersey_Telecom"] {
+    float: right;
 }
 
 .smallSuccessbox2 {
     display: inline-block;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0rem;
 }
 
 [alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"] {
@@ -475,9 +607,10 @@ h1 {
 }
 
 .largeSuccessbox2 {
+    width: 300px;
     display: inline-table;
     position: relative;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.8rem;
     text-align: left;
     background-color: white;
 }
@@ -488,7 +621,7 @@ h1 {
 }
 
 .largeSuccessbox2 p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: inline;
     float: right;
 }
@@ -508,23 +641,172 @@ h1 {
 }
 
 .largeSuccessbox2 h4 {
-    margin: 0px;
+    margin-bottom: 0px;
 }
 
 [alt="Jersey_Telecom"] {
     display: inline;
     right: 0px;
 }
+
 /*rightcolumn*/
 .rightColmun {
+    position: inherit;
+    top: 0px;
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+}
+
+#greyquotelast {
+    float: left;
+}
+
+[alt="multilinksIcon"] {
+    float: right;
+}
+
+.middleSuccessbox {
+    background-color: white;
+    margin-bottom: 0.2rem;
+    padding-bottom: 28px;
+}
+
+.middleSuccessbox p {
     position: relative;
-    bottom: 1rem;
+    display: inline;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+.middleSuccessbox hr {
+    margin: 1rem;
+}
+
+.middleSuccessbox div h4 {
+    margin: 0px;
+}
+
+.middleSuccessbox div img {
+    float: right;
+}
+
+.nameAndrole3 {
+    position: relative;
     display: inline-table;
-    width: 180px;
+    margin-left: 0.5rem;
+    top: 0px;
+    left: 0px;
+}
+
+[alt="playwicon"], [alt="mobIcon"] {
+    display: inline;
+    max-width: 6.1rem;
+    height: auto;
+}
+
+#successCenter button {
+    display: inline-block;
+}
+
+[alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"],
+[alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"]
+[alt="playwicon"], [alt="mobIcon"] {
+
+}
+
+[alt="maxIcon"]:hover, [alt="KyivstarIcon"]:hover, [alt="VIDEOIcon"]:hover,
+[alt="mtsIcon"]:hover, [alt="tataSkyIcon"]:hover, [alt="upcIcon"]:hover
+[alt="playwicon"]:hover, [alt="mobIcon"]:hover {
 }
 
 /*end section4*/
 /*start footer*/
+footer div {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
 footer {
+    display: inline-block;
+    background-image: url("img/solutions-bg.png");
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.79);
+    width: 100%;
+}
+
+footer div section {
+    display: inline-table;
+    margin-right: 40px;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.footerRight {
+    float: right;
+    margin-top: -10px;
+    margin-right: 0px;
+    padding-bottom: 26px;
+    background-color: rgba(91, 91, 91, 0.8);
+    text-align: center;
+    width: 210px;
+
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footerRight h2 {
     display: block;
+    color: #47c3f0;
+}
+
+.footerDate {
+    display: inline-block;
+    font-size: 1rem;
+    width: 50px;
+    margin: 0px;
+}
+
+.footerDate span {
+    display: block;
+    font-size: 2rem;
+
+}
+
+.footerRight p {
+    text-align: left;
+    font-size: 0.8rem;
+    display: inline-block;
+    width: 120px;
+}
+
+.footerRight label {
+    width: 210px;
+}
+
+.footerRight input {
+    border: 0;
+    padding: 0.3rem;
+    max-width: 150px;
+    height: auto;
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+}
+
+.footerRight input[type="submit"] {
+    margin-left: -25px;
+    background-color: #47c3f0;
+    color: white;
 }
