@@ -49,7 +49,7 @@ header ul li {
 .dropdownBtn {
     padding-right: 10px;
     padding-left: 10px;
-    border-right: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
     color: #888888;
     text-decoration: none;
 }
@@ -66,12 +66,16 @@ header ul li {
     text-shadow: 1px 1px 1px lightgray;
 }
 
-header ul li:last-child label {
-    border-right: 0;
+.navMenu:hover + .navMenu .dropdownBtn {
+    border-left: 0px;
 }
 
-header ul li:first-child label:hover {
-    border-left: 1px solid #d0d0d0;
+header ul li:first-child label {
+    border-left: 0;
+}
+
+header ul li:last-child label:hover {
+    border-right: 1px solid #d0d0d0;
 }
 
 header ul li:hover .nav-bg {
@@ -94,14 +98,17 @@ header ul ul li {
     border: 1px solid #d0d0d0;
     display: none;
 }
+
 .nav-bg li a {
     text-decoration: none;
-    color: gray ;
+    color: gray;
     font-size: 0.9rem;
 }
+
 .nav-bg li a:hover {
     color: #5C91BE;
 }
+
 .nav-bg img {
     padding-left: 40px;
     border-left: 1px solid #d0d0d0;
@@ -154,7 +161,7 @@ header ul li:last-child label {
 
 #searchInput {
     border: 0;
-    background-color: hsla(0,0%,0%,0);
+    background-color: hsla(0, 0%, 0%, 0);
 }
 
 form button {
@@ -180,9 +187,16 @@ form button:hover {
 main {
     position: relative;
 }
+
 .section1 {
+    position: relative;
+    overflow: hidden;
 }
+
 #slide1 {
+    position: relative;
+    top: 0;
+    left: 0;
     height: 400px;
     background-image: url("img/slide/custom-experience.jpg");
     background-repeat: no-repeat;
@@ -190,7 +204,28 @@ main {
     background-position: center;
     background-size: cover;
     overflow: auto;
+    transition: 1s;
 }
+#slide2 {
+    color: white;
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 400px;
+    width: 100%;
+    background-image: url("img/slide/smartly-monetize.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    transition: all 300ms ease;
+    overflow: auto;
+}
+section1:hover #slide2  {
+    right: 0;
+}
+
 .section1 ul {
     margin: 0;
     padding: 0;
@@ -209,31 +244,23 @@ main {
 .section1AbsoluteElementsDiv {
     position: absolute;
     width: 100%;
-    top: 190px;
+    top: 200px;
 }
 
 .radioButtons ul {
     padding-left: 0;
 }
+
 .radioButtons li {
     display: inline-block;
 }
-.radioButtons li a{
+
+.radioButtons li a {
     display: inline-block;
     background-color: #d0d0d0;
     width: 12px;
     height: 12px;
     border-radius: 3px 3px 3px 3px;
-}
-
-.radioButtons li a:focus {
-    background-color: #5C91BE;
-}
-[value="radio2"]:focus {
-    background-color: aqua !important;
-}
-[value="radio2"]:focus #slide1 {
-    background-position: -1700px 0px !important;
 }
 
 .blueBgWhiteTxtBtn {
@@ -527,6 +554,7 @@ h1 {
 /*left column*/
 
 .leftColumn {
+    position: relative;
     display: inline-block;
     width: 300px;
     margin-right: 0px;
@@ -537,8 +565,13 @@ h1 {
     margin-top: 0.2rem;
 }
 
-[alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"] {
-    max-width: 6rem;
+.iconHover1, [alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"] {
+    float: left;
+    width: 97px;
+    height: auto;
+}
+.iconHover1, [alt="mtsIcon"], [alt="tataSkyIcon"] {
+    margin-right: 4px ;
 }
 
 [alt="greyQuote"] {
@@ -548,15 +581,15 @@ h1 {
 }
 
 .largeSuccessbox {
+    width: 300px;
     display: inline-table;
-    position: relative;
     text-align: left;
     background-color: white;
 }
 
 .largeSuccessbox hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2.3rem;
 }
 
 .largeSuccessbox p {
@@ -581,7 +614,7 @@ h1 {
 /*end left column*/
 /*start middle column*/
 .middleColumn {
-    bottom: 1rem;
+    position: relative;
     vertical-align: top;
     display: inline-block;
     width: 300px;
@@ -596,8 +629,14 @@ h1 {
     margin-bottom: 0rem;
 }
 
-[alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"] {
-    max-width: 6rem;
+.iconHover2, [alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"] {
+    float: left;
+    width: 97px;
+    height: auto;
+}
+
+.iconHover2, [alt="maxIcon"], [alt="KyivstarIcon"] {
+    margin-right: 4px;
 }
 
 [alt="greyQuote"] {
@@ -651,11 +690,12 @@ h1 {
 
 /*rightcolumn*/
 .rightColmun {
-    position: inherit;
+    position: relative;
     top: 0px;
     text-align: left;
     display: inline-block;
     width: 200px;
+    vertical-align: top;
 }
 
 #greyquotelast {
@@ -699,15 +739,77 @@ h1 {
     left: 0px;
 }
 
-[alt="playwicon"], [alt="mobIcon"] {
+.iconHover3, [alt="playwicon"], [alt="mobIcon"] {
     display: inline;
     max-width: 6.1rem;
     height: auto;
 }
-
+.iconHover2 {
+    margin: 0;
+}
 #successCenter button {
     display: inline-block;
 }
+
+/*hovers*/
+#BTCBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#BTCboxhover {
+    height: 233px;
+    background-color: #47A2CF;
+}
+
+.hoverable:hover #BTCBox {
+    display: none;
+}
+
+#grameMillerBox {
+    position: absolute;
+    top: 90px;
+    height: 203px;
+    left: 0;
+}
+
+#grameMillerBoxhover {
+    height: 232px;
+    background-color: #47A2CF;
+}
+
+.hoverable:hover #grameMillerBox {
+    display: none;
+}
+
+.middleSuccessbox {
+    position: absolute;
+    width: 200px;
+    top: 0px;
+    height: 202px;
+    left: 0;
+}
+
+#rightBoxhover {
+    height: 230px;
+    background-color: #47A2CF;
+    margin-bottom: 5px;
+}
+
+.hoverable:hover .middleSuccessbox {
+    display: none;
+}
+.iconHover1,
+.iconHover2,
+.iconHover3{
+    cursor: pointer;
+}
+.iconHover1:hover img,
+.iconHover2:hover img,
+.iconHover3:hover img {
+    content: url("img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
+ }
 
 [alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"],
 [alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"]

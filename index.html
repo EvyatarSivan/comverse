@@ -152,9 +152,9 @@
     <main>
         <section class="section1">
             <ul>
-                <li>
-                    <div id="slide1">
-                        continue more slides and surround each one with anchor
+                <li id="slide1">
+                    <div>
+                        <!--continue more slides and surround each one with anchor-->
                         <div class="center">
                             <h1>
                                 <strong>Free</strong> Your Markets From <br> IT <b>Complexity</b>
@@ -167,18 +167,35 @@
                                 <img src="img/btnArrow.png" alt="arrowBtn">
                             </button>
                         </div>
+                    </div>
                 </li>
-                </div>
+                <li id="slide2">
+                    <div>
+                        <!--continue more slides and surround each one with anchor-->
+                        <div class="center">
+                            <h1>
+                                <strong>Free</strong> Your Markets From <br> IT <b>Complexity</b>
+                            </h1>
+                            <p>
+                                Comverse Policy Studio <br><b>1st</b> Ever Marketign-Oriented Policy Tool
+                            </p>
+                            <button class="blueBgWhiteTxtBtn">
+                                LEARN MORE
+                                <img src="img/btnArrow.png" alt="arrowBtn">
+                            </button>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="section1AbsoluteElementsDiv">
                 <div class="center">
 
                     <div class="radioButtons">
                         <ul>
-                            <li><a href="#" value="radio1"></a></li>
-                            <li><a href="#" value="radio2"></a></li>
-                            <li><a href="#" value="radio3"></a></li>
-                            <li><a href="#" value="radio4"></a></li>
+                            <li><a href="#slide1" value="radio1"></a></li>
+                            <li><a href="#slide2" value="radio2"></a></li>
+                            <li><a href="#slide3" value="radio3"></a></li>
+                            <li><a href="#slide4" value="radio4"></a></li>
                         </ul>
                     </div>
                     <section class="section1Boxes" id="box1">
@@ -300,7 +317,7 @@
 
                 <h2>SUCCESS STORIES</h2>
                 <div class="leftColumn" class="columns">
-                    <a href="#">
+                    <a href="#" class="hoverable">
                         <div class="largeSuccessbox" id="BTCBox">
 
                             <img class="facesuccess" src="img/CB-JP-face.png" alt="CB-JP-face">
@@ -316,56 +333,72 @@
                             <img src="img/cable_wireless_w100px_X_h42px2.jpg" alt="cableWirelessIcon">
                         </div>
                         <div id="BTCboxhover">
-                            <img src="img/quote-grey.png" alt="greyQuote">
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
                             <p>bla bla bla</p>
-                            <img src="img/quote-grey.png" alt="greyQuote">
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
                         </div>
                         <!--continue next task adding divs to be behind boxes (blue something)-->
                     </a>
                     <div class="smallSuccessbox1">
-                        <img src="img/mts_w108px_X_h95px.jpg" alt="mtsIcon">
-                        <img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="tataSkyIcon">
-                        <img src="img/upc_w108px_X_h95px.jpg" alt="upcIcon">
+                        <div class="iconHover1">
+                            <div class="inheritedBox"></div>
+                            <img src="img/mts_w108px_X_h95px.jpg" alt="mtsIcon"></div>
+                        <div class="iconHover1"><img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="tataSkyIcon"></div>
+                        <div class="iconHover2"><img src="img/upc_w108px_X_h95px.jpg" alt="upcIcon"></div>
                     </div>
                 </div>
                 <!--next col-->
                 <div class="middleColumn" class="columns">
 
                     <div class="smallSuccessbox2">
-                        <img src="img/MAX_telecom_w108px_X_h95.jpg" alt="maxIcon">
-                        <img src="img/Kyivstarw_w108px_X_h95.jpg" alt="KyivstarIcon">
-                        <img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="VIDEOIcon">
+                        <div class="iconHover1"><img src="img/MAX_telecom_w108px_X_h95.jpg" alt="maxIcon"></div>
+                        <div class="iconHover1"><img src="img/Kyivstarw_w108px_X_h95.jpg" alt="KyivstarIcon"></div>
+                        <div class="iconHover2"><img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="VIDEOIcon"></div>
                     </div>
-                    <div class="largeSuccessbox2">
-                        <img src="img/JT-GM-face.png" alt="JT-GM-face">
-                        <img src="img/quote-grey.png" alt="greyQuote">
-                        <p>The Expectation of<br>Jersey Telecom have been<br>
-                            completed met by<br>Comvers..."</p>
-                        <!--need to find out why cut out in the middle-->
-                        <hr>
-                        <div class="nameAndrole2">
-                            <h4>GRAME MILLER</h4>
-                            <p>CEO</p>
+                    <a href="#" class="hoverable">
+                        <div class="largeSuccessbox2" id="grameMillerBox">
+                            <img src="img/JT-GM-face.png" alt="JT-GM-face">
+                            <img src="img/quote-grey.png" alt="greyQuote">
+                            <p>The Expectation of<br>Jersey Telecom have been<br>
+                                completed met by<br>Comvers..."</p>
+                            <!--need to find out why cut out in the middle-->
+                            <hr>
+                            <div class="nameAndrole2">
+                                <h4>GRAME MILLER</h4>
+                                <p>CEO</p>
+                            </div>
+                            <img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="Jersey_Telecom">
                         </div>
-                        <img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="Jersey_Telecom">
-                    </div>
+                        <div id="grameMillerBoxhover">
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <p>bla bla bla</p>
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                        </div>
+                    </a>
                 </div>
                 <!--next col-->
                 <div class="rightColmun" class="columns">
-                    <div class="middleSuccessbox">
-                        <img src="img/quote-grey.png" alt="greyQuote" id="greyquotelast">
-                        <p>Comverse has<br>demonstrated that<br>they are
-                            partners, not<br>just suppliers</p>
-                        <hr>
-                        <div class="nameAndrole3">
-                            <h4>ADALE KEHASSAN</h4>
-                            <p>CIO</p>
+                    <a href="#" class="hoverable">
+                        <div class="middleSuccessbox">
+                            <img src="img/quote-grey.png" alt="greyQuote" id="greyquotelast">
+                            <p>Comverse has<br>demonstrated that<br>they are
+                                partners, not<br>just suppliers</p>
+                            <hr>
+                            <div class="nameAndrole3">
+                                <h4>ADALE KEHASSAN</h4>
+                                <p>CIO</p>
+                            </div>
+                            <img src="img/multilinks.jpg" alt="multilinksIcon">
                         </div>
-                        <img src="img/multilinks.jpg" alt="multilinksIcon">
-                    </div>
+                        <div id="rightBoxhover">
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <p>bla bla bla</p>
+                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                        </div>
+                    </a>
                     <div class="smallSuccessbox">
-                        <img src="img/3mob_w108px_X_h95px.jpg" alt="mobIcon">
-                        <img src="img/play_w108px_X_h95px.jpg" alt="playwicon">
+                        <div class="iconHover3"><img src="img/3mob_w108px_X_h95px.jpg" alt="mobIcon"></div>
+                        <div class="iconHover3"><img src="img/play_w108px_X_h95px.jpg" alt="playwicon"></div>
                     </div>
                 </div>
                 <button class="blueBgWhiteTxtBtn">
