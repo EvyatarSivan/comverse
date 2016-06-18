@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" width="device-width">
     <link rel="stylesheet" type="text/css" href="comverse-home.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
@@ -152,6 +153,7 @@
     <main>
         <section class="section1">
             <ul>
+                <input type="radio" id="check1" name="radios">
                 <li id="slide1">
                     <div>
                         <!--continue more slides and surround each one with anchor-->
@@ -169,6 +171,7 @@
                         </div>
                     </div>
                 </li>
+                <input type="radio" id="check2" name="radios">
                 <li id="slide2">
                     <div>
                         <!--continue more slides and surround each one with anchor-->
@@ -186,16 +189,17 @@
                         </div>
                     </div>
                 </li>
+                <input type="radio" id="check3" name="radios">
             </ul>
             <div class="section1AbsoluteElementsDiv">
                 <div class="center">
 
                     <div class="radioButtons">
                         <ul>
-                            <li><a href="#slide1" value="radio1"></a></li>
-                            <li><a href="#slide2" value="radio2"></a></li>
-                            <li><a href="#slide3" value="radio3"></a></li>
-                            <li><a href="#slide4" value="radio4"></a></li>
+                            <li><a href="#"><label for="check1" value="radio1"></label></a></li>
+                            <li><a href="#"><label for="check2" value="radio2"></label></a></li>
+                            <li><a href="#"><label for="check3" value="radio3"></label></a></li>
+                            <li><a></a><label for="check4" value="radio4"></label></li>
                         </ul>
                     </div>
                     <section class="section1Boxes" id="box1">
@@ -317,7 +321,7 @@
 
                 <h2>SUCCESS STORIES</h2>
                 <div class="leftColumn" class="columns">
-                    <a href="#" class="hoverable">
+                    <div class="hoverable btcWrapper">
                         <div class="largeSuccessbox" id="BTCBox">
 
                             <img class="facesuccess" src="img/CB-JP-face.png" alt="CB-JP-face">
@@ -338,24 +342,25 @@
                             <img src="img/quote-grey.png" alt="greyQuotehover">
                         </div>
                         <!--continue next task adding divs to be behind boxes (blue something)-->
-                    </a>
+                    </div>
                     <div class="smallSuccessbox1">
-                        <div class="iconHover1">
+                        <div class="iconHover1 smallIconsHoverClass">
                             <div class="inheritedBox"></div>
-                            <img src="img/mts_w108px_X_h95px.jpg" alt="mtsIcon"></div>
-                        <div class="iconHover1"><img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="tataSkyIcon"></div>
-                        <div class="iconHover2"><img src="img/upc_w108px_X_h95px.jpg" alt="upcIcon"></div>
+                            <img src="img/mts_w108px_X_h95px.jpg" alt="mtsIcon">
+                        </div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="tataSkyIcon"></div>
+                        <div class="iconHover2 smallIconsHoverClass"><img src="img/upc_w108px_X_h95px.jpg" alt="upcIcon"></div>
                     </div>
                 </div>
                 <!--next col-->
                 <div class="middleColumn" class="columns">
 
                     <div class="smallSuccessbox2">
-                        <div class="iconHover1"><img src="img/MAX_telecom_w108px_X_h95.jpg" alt="maxIcon"></div>
-                        <div class="iconHover1"><img src="img/Kyivstarw_w108px_X_h95.jpg" alt="KyivstarIcon"></div>
-                        <div class="iconHover2"><img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="VIDEOIcon"></div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/MAX_telecom_w108px_X_h95.jpg" alt="maxIcon"></div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Kyivstarw_w108px_X_h95.jpg" alt="KyivstarIcon"></div>
+                        <div class="iconHover2 smallIconsHoverClass"><img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="VIDEOIcon"></div>
                     </div>
-                    <a href="#" class="hoverable">
+                    <div class="hoverable grameWrapper">
                         <div class="largeSuccessbox2" id="grameMillerBox">
                             <img src="img/JT-GM-face.png" alt="JT-GM-face">
                             <img src="img/quote-grey.png" alt="greyQuote">
@@ -374,7 +379,7 @@
                             <p>bla bla bla</p>
                             <img src="img/quote-grey.png" alt="greyQuotehover">
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!--next col-->
                 <div class="rightColmun" class="columns">
@@ -397,8 +402,8 @@
                         </div>
                     </a>
                     <div class="smallSuccessbox">
-                        <div class="iconHover3"><img src="img/3mob_w108px_X_h95px.jpg" alt="mobIcon"></div>
-                        <div class="iconHover3"><img src="img/play_w108px_X_h95px.jpg" alt="playwicon"></div>
+                        <div class="iconHover3 smallIconsHoverClass"><img src="img/3mob_w108px_X_h95px.jpg" alt="mobIcon"></div>
+                        <div class="iconHover3 smallIconsHoverClass"><img src="img/play_w108px_X_h95px.jpg" alt="playwicon"></div>
                     </div>
                 </div>
                 <button class="blueBgWhiteTxtBtn">

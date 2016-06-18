@@ -206,6 +206,7 @@ main {
     overflow: auto;
     transition: 1s;
 }
+
 #slide2 {
     color: white;
     display: inline;
@@ -222,13 +223,18 @@ main {
     transition: all 300ms ease;
     overflow: auto;
 }
-section1:hover #slide2  {
+
+#check2:checked + #slide2 {
     right: 0;
 }
 
 .section1 ul {
     margin: 0;
     padding: 0;
+}
+
+[name="radios"] {
+    display: none;
 }
 
 #slide1 h1 {
@@ -252,15 +258,30 @@ section1:hover #slide2  {
 }
 
 .radioButtons li {
+    position: relative;
     display: inline-block;
-}
-
-.radioButtons li a {
-    display: inline-block;
+    cursor: pointer;
     background-color: #d0d0d0;
     width: 12px;
     height: 12px;
     border-radius: 3px 3px 3px 3px;
+}
+
+.radioButtons li a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.radioButtons li a:focus label {
+    background-color: #3196CF;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.radioButtons li label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .blueBgWhiteTxtBtn {
@@ -569,9 +590,11 @@ h1 {
     float: left;
     width: 97px;
     height: auto;
+    transition: all 200ms;
 }
+
 .iconHover1, [alt="mtsIcon"], [alt="tataSkyIcon"] {
-    margin-right: 4px ;
+    margin-right: 4px;
 }
 
 [alt="greyQuote"] {
@@ -633,6 +656,7 @@ h1 {
     float: left;
     width: 97px;
     height: auto;
+    transition: all 200ms;
 }
 
 .iconHover2, [alt="maxIcon"], [alt="KyivstarIcon"] {
@@ -744,43 +768,64 @@ h1 {
     max-width: 6.1rem;
     height: auto;
 }
+
 .iconHover2 {
     margin: 0;
 }
+
 #successCenter button {
     display: inline-block;
 }
 
 /*hovers*/
+.hoverable {
+    overflow-y: hidden;
+    height: 232px;
+    background-color: #47A2CF;
+    left: 0;
+}
 #BTCBox {
     position: absolute;
     top: 0;
     left: 0;
+    transition: all 200ms;
 }
 
 #BTCboxhover {
     height: 233px;
     background-color: #47A2CF;
 }
+.btcWrapper {
+    position: relative;
+}
 
 .hoverable:hover #BTCBox {
-    display: none;
+    transform: translateY(-100%);
+}
+
+.grameWrapper {
+    position: relative;
 }
 
 #grameMillerBox {
     position: absolute;
-    top: 90px;
     height: 203px;
     left: 0;
+    transition: all 200ms;
 }
 
 #grameMillerBoxhover {
+    overflow-y: hidden;
     height: 232px;
     background-color: #47A2CF;
 }
 
 .hoverable:hover #grameMillerBox {
-    display: none;
+    transform: translateY(-100%);
+}
+.iconHover1 {
+    position: relative;
+    overflow: hidden;
 }
 
 .middleSuccessbox {
@@ -800,16 +845,22 @@ h1 {
 .hoverable:hover .middleSuccessbox {
     display: none;
 }
+
+.hoverable {
+    overflow: hidden;
+}
+
 .iconHover1,
 .iconHover2,
-.iconHover3{
+.iconHover3 {
     cursor: pointer;
 }
+
 .iconHover1:hover img,
 .iconHover2:hover img,
 .iconHover3:hover img {
     content: url("img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
- }
+}
 
 [alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"],
 [alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"]
