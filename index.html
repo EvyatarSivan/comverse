@@ -12,8 +12,10 @@
 <body>
     <header>
         <div class="center">
-            <img src="img/comverse-logo.png" alt="Comverse Logo">
-            <ul>
+            <button class="nav-button hamburger"><img src="img/hamburger-icon.png" alt="hamburger-icon.png"></button>
+            <a href="#" class="logo"></a>
+            <button class="nav-button"><img src="img/searchBtnMobile.png" alt="searchBtnMobile.png"></button>
+            <ul class="nav">
                 <li class="navMenu">
                     <label class="dropdownBtn">YOUR NEEDS</label>
                     <div class="nav-bg">
@@ -139,7 +141,7 @@
                         <option value="HE">HE</option>
                         <option value="SP">SP</option>
                     </select>
-                    <span>Customer Login</span>
+                    <a href="#">Customer Login</a>
                 </div>
                 <div id="bottomSearch">
                     <form>
@@ -152,9 +154,9 @@
     </header>
     <main>
         <section class="section1">
-            <ul>
+            <ul class="ul-slides">
                 <input type="radio" id="check1" name="radios">
-                <li id="slide1">
+                <li id="slide1" class="slides">
                     <div>
                         <!--continue more slides and surround each one with anchor-->
                         <div class="center">
@@ -172,16 +174,18 @@
                     </div>
                 </li>
                 <input type="radio" id="check2" name="radios">
-                <li id="slide2">
+                <li id="slide2" class="slides">
                     <div>
                         <!--continue more slides and surround each one with anchor-->
                         <div class="center">
                             <h1>
-                                <strong>Free</strong> Your Markets From <br> IT <b>Complexity</b>
+                                Smartly <strong>Monetize</strong> <br> New Business Models
                             </h1>
-                            <p>
-                                Comverse Policy Studio <br><b>1st</b> Ever Marketign-Oriented Policy Tool
-                            </p>
+                            <ul>
+                                <li>Smart Data Monetization & Analytics</li>
+                                <li>M2M & Cloud</li>
+                                <li>Customer Aware Policy</li>
+                            </ul>
                             <button class="blueBgWhiteTxtBtn">
                                 LEARN MORE
                                 <img src="img/btnArrow.png" alt="arrowBtn">
@@ -190,6 +194,38 @@
                     </div>
                 </li>
                 <input type="radio" id="check3" name="radios">
+                <li id="slide3" class="slides">
+                    <div>
+                        <!--continue more slides and surround each one with anchor-->
+                        <div class="center">
+                            <h1>
+                                Evolve to G<strong>IP/4</strong>
+                            </h1>
+                            <ul>
+                                <li>3G/4G Service Evolution</li>
+                                <li>Rich Communication Services (RCS)</li>
+                                <li>Service and Device-Aware Charging</li>
+                            </ul>
+                            <button class="blueBgWhiteTxtBtn">
+                                LEARN MORE
+                                <img src="img/btnArrow.png" alt="arrowBtn">
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <input type="radio" id="check4" name="radios">
+                <li id="slide4" class="slides">
+                    <div>
+                        <!--continue more slides and surround each one with anchor-->
+                        <div class="center">
+                            <h1>Digital Services</h1>
+                            <button class="blueBgWhiteTxtBtn">
+                                LEARN MORE
+                                <img src="img/btnArrow.png" alt="arrowBtn">
+                            </button>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="section1AbsoluteElementsDiv">
                 <div class="center">
@@ -199,7 +235,7 @@
                             <li><a href="#"><label for="check1" value="radio1"></label></a></li>
                             <li><a href="#"><label for="check2" value="radio2"></label></a></li>
                             <li><a href="#"><label for="check3" value="radio3"></label></a></li>
-                            <li><a></a><label for="check4" value="radio4"></label></li>
+                            <li><a href="#"><label for="check4" value="radio3"></label></a></li>
                         </ul>
                     </div>
                     <section class="section1Boxes" id="box1">
@@ -337,9 +373,14 @@
                             <img src="img/cable_wireless_w100px_X_h42px2.jpg" alt="cableWirelessIcon">
                         </div>
                         <div id="BTCboxhover">
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
-                            <p>bla bla bla</p>
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <img src="img/quote-blue.png" alt="greyQuotehover">
+                            <p>
+                                BTC, a full-service provider in the Bahamas,
+                                depends on Comverse solutions for real time BSS,
+                                voice services, SMS,
+                                MMS and data management and monetization.
+                                <img src="img/quote-blue.png" class="lastQuote" alt="greyQuotehover">
+                            </p>
                         </div>
                         <!--continue next task adding divs to be behind boxes (blue something)-->
                     </div>
@@ -348,17 +389,22 @@
                             <div class="inheritedBox"></div>
                             <img src="img/mts_w108px_X_h95px.jpg" alt="mtsIcon">
                         </div>
-                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="tataSkyIcon"></div>
-                        <div class="iconHover2 smallIconsHoverClass"><img src="img/upc_w108px_X_h95px.jpg" alt="upcIcon"></div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Tata_Sky_w108px_X_h95px.jpg"
+                                                                          alt="tataSkyIcon"></div>
+                        <div class="iconHover2 smallIconsHoverClass"><img src="img/upc_w108px_X_h95px.jpg"
+                                                                          alt="upcIcon"></div>
                     </div>
                 </div>
                 <!--next col-->
                 <div class="middleColumn" class="columns">
 
                     <div class="smallSuccessbox2">
-                        <div class="iconHover1 smallIconsHoverClass"><img src="img/MAX_telecom_w108px_X_h95.jpg" alt="maxIcon"></div>
-                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Kyivstarw_w108px_X_h95.jpg" alt="KyivstarIcon"></div>
-                        <div class="iconHover2 smallIconsHoverClass"><img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="VIDEOIcon"></div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/MAX_telecom_w108px_X_h95.jpg"
+                                                                          alt="maxIcon"></div>
+                        <div class="iconHover1 smallIconsHoverClass"><img src="img/Kyivstarw_w108px_X_h95.jpg"
+                                                                          alt="KyivstarIcon"></div>
+                        <div class="iconHover2 smallIconsHoverClass"><img src="img/VIDEOCON_w108px_X_h95px.jpg"
+                                                                          alt="VIDEOIcon"></div>
                     </div>
                     <div class="hoverable grameWrapper">
                         <div class="largeSuccessbox2" id="grameMillerBox">
@@ -375,9 +421,9 @@
                             <img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="Jersey_Telecom">
                         </div>
                         <div id="grameMillerBoxhover">
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <img src="img/quote-blue.png" alt="greyQuotehover">
                             <p>bla bla bla</p>
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <img src="img/quote-blue.png" class="lastQuote" alt="greyQuotehover">
                         </div>
                     </div>
                 </div>
@@ -396,14 +442,16 @@
                             <img src="img/multilinks.jpg" alt="multilinksIcon">
                         </div>
                         <div id="rightBoxhover">
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <img src="img/quote-blue.png" alt="greyQuotehover">
                             <p>bla bla bla</p>
-                            <img src="img/quote-grey.png" alt="greyQuotehover">
+                            <img src="img/quote-blue.png" class="lastQuote" alt="greyQuotehover">
                         </div>
                     </a>
                     <div class="smallSuccessbox">
-                        <div class="iconHover3 smallIconsHoverClass"><img src="img/3mob_w108px_X_h95px.jpg" alt="mobIcon"></div>
-                        <div class="iconHover3 smallIconsHoverClass"><img src="img/play_w108px_X_h95px.jpg" alt="playwicon"></div>
+                        <div class="iconHover3 smallIconsHoverClass"><img src="img/3mob_w108px_X_h95px.jpg"
+                                                                          alt="mobIcon"></div>
+                        <div class="iconHover3 smallIconsHoverClass lastchild"><img src="img/play_w108px_X_h95px.jpg"
+                                                                          alt="playwicon"></div>
                     </div>
                 </div>
                 <button class="blueBgWhiteTxtBtn">

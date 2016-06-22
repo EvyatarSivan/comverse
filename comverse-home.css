@@ -25,11 +25,16 @@ header {
     box-shadow: 0px 5px 5px #888888;
 }
 
-header img[alt="Comverse Logo"] {
+header .logo {
+    background-image: url("img/comverse-logo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 8rem;
-    height: auto;
+    height: 43px;
     margin-right: 5px;
     display: inline-block;
+    cursor: pointer;
 }
 
 header ul {
@@ -61,7 +66,7 @@ header ul li {
     border: 1px solid #d0d0d0;
     border-bottom: 0px;
     background-color: white;
-    box-shadow: px;
+    box-shadow: 5px;
     color: gray;
     text-shadow: 1px 1px 1px lightgray;
 }
@@ -139,10 +144,6 @@ header ul li:last-child label {
     margin-bottom: 10px;
 }
 
-#topSearch span {
-    width: 0.8rem;
-}
-
 #bottomSearch {
     display: inline-block;
     /*don't know how to make it relative'*/
@@ -159,9 +160,17 @@ header ul li:last-child label {
     bottom: 20px;
 }
 
+#bottomSearch:focus {
+    outline: ghostwhite;
+}
+
 #searchInput {
     border: 0;
     background-color: hsla(0, 0%, 0%, 0);
+}
+
+#searchInput:focus {
+    outline: none;
 }
 
 form button {
@@ -182,6 +191,68 @@ form button:hover {
     color: #888888;
 }
 
+#topSearch a {
+    width: 0.8rem;
+    text-decoration: none;
+    color: #888888;
+}
+
+#topSearch a:hover {
+    color: #5C91BE;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 769px) {
+    .nav-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .center {
+        width: 90%;
+    }
+
+    header .center {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #search {
+        display: none;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #C1C1C1;
+    }
+
+    header ul {
+        height: 0px;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0px;
+    }
+
+    header .hamburger:focus ~ .nav {
+        height: 100%;
+        display: block;
+    }
+
+    header .nav li {
+        height: 20px;
+        font-size: 0.9rem;
+        float: none;
+        background-color: white;
+        border: 1px solid #C1C1C1;
+    }
+}
+
 /*end header*/
 /*start section1*/
 main {
@@ -189,8 +260,15 @@ main {
 }
 
 .section1 {
+    width: 100%;
     position: relative;
     overflow: hidden;
+    color: white;
+    font-weight: normal;
+}
+
+.section1 button {
+    margin-left: 0;
 }
 
 #slide1 {
@@ -224,7 +302,53 @@ main {
     overflow: auto;
 }
 
+#slide2 ul {
+    font-size: 0.9rem;
+}
+
+#slide3 {
+    color: white;
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: -200%;
+    height: 400px;
+    width: 100%;
+    background-image: url("img/slide/evolve-to-ip4g.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    transition: all 300ms ease;
+    overflow: auto;
+}
+
+#slide4 {
+    color: white;
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: -300%;
+    height: 400px;
+    width: 100%;
+    background-image: url("img/slide/digital-services.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    transition: all 300ms ease;
+    overflow: auto;
+}
+
 #check2:checked + #slide2 {
+    right: 0;
+}
+
+#check3:checked + #slide3 {
+    right: 0;
+}
+
+#check4:checked + #slide4 {
     right: 0;
 }
 
@@ -235,16 +359,6 @@ main {
 
 [name="radios"] {
     display: none;
-}
-
-#slide1 h1 {
-    color: white;
-    font-weight: normal;
-}
-
-#slide1 p {
-    color: white;
-    font-size: 0.8rem;
 }
 
 .section1AbsoluteElementsDiv {
@@ -367,6 +481,52 @@ main {
     background-color: hsla(30, 79%, 55%, 1);
 }
 
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .ul-slides {
+        height: 1000px;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section1 {
+    }
+
+    .slides {
+        position: static !important;
+        display: block !important;
+        top: 0;
+        left: 0;
+        height: 400px;
+        background-image: url("img/slide/custom-experience.jpg");
+        background-repeat: no-repeat;
+        background-attachment: local !important;
+        background-position: center;
+        background-size: cover;
+        overflow: auto;
+    }
+
+    .section1AbsoluteElementsDiv {
+        position: static; !important;
+    }
+    .section1AbsoluteElementsDiv .center {
+        padding: 0;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .radioButtons {
+        display: none;
+    }
+
+    .section1Boxes {
+        position: static !important;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
 /*end section1*/
 /*start section2*/
 #whatWeDo {
@@ -384,6 +544,7 @@ main {
 }
 
 .whatwedoimg {
+    cursor: pointer;
     width: 110px;
     background-repeat: no-repeat;
     background-position: top;
@@ -478,6 +639,7 @@ main {
 }
 
 .happeningBox {
+    cursor: pointer;
     position: relative;
     display: inline-table;
     width: 12rem;
@@ -489,6 +651,11 @@ main {
     bottom: 0;
     font-size: 0.9rem;
     color: white;
+    transition: all 300ms ease
+}
+
+.happeningBox:hover {
+    background-color: hsla(0, 100%, 100%, 0.6);
 }
 
 .happeningBox .happeningDate {
@@ -519,7 +686,7 @@ h1 {
 }
 
 .happeningBox p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .happeningDiv a {
@@ -542,7 +709,6 @@ h1 {
 
 /*end section3*/
 /*start section4*/
-
 #succesStoriesSec {
     display: block;
     text-align: center;
@@ -573,7 +739,6 @@ h1 {
 }
 
 /*left column*/
-
 .leftColumn {
     position: relative;
     display: inline-block;
@@ -590,7 +755,7 @@ h1 {
     float: left;
     width: 97px;
     height: auto;
-    transition: all 200ms;
+    transition: all 300ms ease;
 }
 
 .iconHover1, [alt="mtsIcon"], [alt="tataSkyIcon"] {
@@ -656,7 +821,7 @@ h1 {
     float: left;
     width: 97px;
     height: auto;
-    transition: all 200ms;
+    transition: all 300ms ease;
 }
 
 .iconHover2, [alt="maxIcon"], [alt="KyivstarIcon"] {
@@ -764,17 +929,32 @@ h1 {
 }
 
 .iconHover3, [alt="playwicon"], [alt="mobIcon"] {
+    float: left;
+    margin-right: 5px;
     display: inline;
-    max-width: 6.1rem;
+    width: 97px;
     height: auto;
+    transition: all 300ms ease;
+
 }
 
 .iconHover2 {
     margin: 0;
+    overflow: hidden;
+}
+
+.iconHover3, .iconHover1, .iconHover2 {
+    background-image: url("img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #successCenter button {
     display: inline-block;
+}
+
+.lastchild {
+    margin-right: 0;
 }
 
 /*hovers*/
@@ -784,17 +964,45 @@ h1 {
     background-color: #47A2CF;
     left: 0;
 }
+
 #BTCBox {
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
-    transition: all 200ms;
+    transition: all 500ms ease;
 }
 
 #BTCboxhover {
-    height: 233px;
-    background-color: #47A2CF;
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+    height: 213px;
+    background-color: #39A6DB;
 }
+
+#BTCboxhover img {
+    float: left;
+}
+
+.lastQuote {
+    /*float: right;*/
+}
+
+#BTCboxhover p {
+    align-content: stretch;
+    color: white;
+    text-indent: hanging;
+    width: 230px;
+    float: left;
+}
+
+.lastQuote {
+    position: absolute;
+    top: 150px;
+    vertical-align: bottom;
+}
+
 .btcWrapper {
     position: relative;
 }
@@ -811,18 +1019,20 @@ h1 {
     position: absolute;
     height: 203px;
     left: 0;
-    transition: all 200ms;
+    transition: all 500ms ease;
 }
 
 #grameMillerBoxhover {
     overflow-y: hidden;
-    height: 232px;
-    background-color: #47A2CF;
+    padding: 10px;
+    height: 212px;
+    background-color: #39A6DB;
 }
 
 .hoverable:hover #grameMillerBox {
     transform: translateY(-100%);
 }
+
 .iconHover1 {
     position: relative;
     overflow: hidden;
@@ -834,16 +1044,20 @@ h1 {
     top: 0px;
     height: 202px;
     left: 0;
+    transition: all 500ms ease;
+
 }
 
 #rightBoxhover {
-    height: 230px;
-    background-color: #47A2CF;
+    padding: 10px;
+    height: 210px;
+    background-color: #39A6DB;
     margin-bottom: 5px;
 }
 
 .hoverable:hover .middleSuccessbox {
-    display: none;
+    transform: translateY(-100%);
+
 }
 
 .hoverable {
@@ -853,18 +1067,14 @@ h1 {
 .iconHover1,
 .iconHover2,
 .iconHover3 {
+    overflow: hidden;
     cursor: pointer;
 }
 
 .iconHover1:hover img,
 .iconHover2:hover img,
 .iconHover3:hover img {
-    content: url("img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
-}
-
-[alt="maxIcon"], [alt="KyivstarIcon"], [alt="VIDEOIcon"],
-[alt="mtsIcon"], [alt="tataSkyIcon"], [alt="upcIcon"]
-[alt="playwicon"], [alt="mobIcon"] {
+    transform: translateY(-100%);
 
 }
 
